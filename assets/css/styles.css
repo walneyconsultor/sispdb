@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo|Montserrat');
+
+*::selection {
+  background-color: #D7CCC8;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(45deg, #EEEEEE 70%, #F5F5F5 30%);
+}
+
+h1 {
+  font-family: "Arimo";
+}
+
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  padding-top: 0;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.4);
+  border: 0.5px solid #000;
+  border-radius: 25px;
+  margin-top: 70px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.variaveis {
+  display: flex;
+  flex-direction: column;
+  flex-flow: 1;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.variaveis span {
+  font-family: "Montserrat";
+}
+
+#wrapper #testarVariaveisBtn {
+  width: 50%;
+  flex: 1;
+  margin-bottom: 10px;
+  background-color: #222222;
+  color: #EEEEEE;
+  height: 35px;
+  border-radius: 25px;
+  transition: all .3s ease;
+  cursor: pointer;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+}
+
+#wrapper #testarVariaveisBtn:hover {
+  transform: scale(1.1);
+  background-color: #EEE;
+  color: #222222;
+  border: 0.5px solid #222222;
+}
+
+#resultado {
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  position: relative;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: .4rem;
+}
+
+#resultado span {
+  font-family: 'Arimo', sans-serif;
+  font-size: 0.8rem;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+#resultado::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 25px;
+}
+
+#resultado::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+#resultado::-webkit-scrollbar-thumb {
+  background-color: rgb(33, 33, 33);
+  outline: 1px solid rgb(33, 33, 33);
+}
+
+.elemento-var {
+  display: flex;
+  justify-content: space-between;
+}
+
+.elemento-var i {
+  color: #26A65B;
+}
+
+.spinner {
+  border: 2px solid #26A65B;
+  border-radius: 50%;
+  border-top: 2px solid #EEE;
+  width: 11px;
+  height: 11px;
+  -webkit-animation: spin 1.2s linear infinite; /* Safari */
+  animation: spin 1.2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
